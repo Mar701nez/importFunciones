@@ -21,6 +21,16 @@ function ejecutarPruebas(){
         console.log("Test 2: fallido", estado, "en Martinez");
         fallidas++
     }
+
+     const r3 = sumar(5, 10);
+  if (r3.includes("15")) {
+    console.log("Test 3 pasado: funcion sumar correcta en Martinez");
+    pasadas++;
+  } else {
+    console.log("Test 3 fallido: ", r3);
+    fallidas++;
+  }
+  
     console.log("\nResultados: " + pasadas + "pasadas, ", + fallidas + "fallidas");
     if (fallidas>0) ProcessingInstruction.exit(1);
 }
