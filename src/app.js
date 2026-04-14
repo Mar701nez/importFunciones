@@ -14,3 +14,12 @@ export function sumar(a, b) {
   const resultado = a + b;
   return "la suma de los numeros " + a + " + " + b + " es igual a " + resultado;
 }
+
+export function healtCheack () {
+  return {
+    status:'ok',
+    timestape: new Date().toISOString(),
+    servicio: 'Streamflow API',
+    version: '1.0.0'
+  };
+}
