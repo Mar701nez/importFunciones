@@ -1,4 +1,4 @@
-import {saludar, estadoSistema, sumar} from "../src/app.js"
+import {saludar, estadoSistema, sumar, healtCheack} from "../src/app.js"
 
 function ejecutarPruebas(){
     let pasadas = 0;
@@ -23,13 +23,22 @@ function ejecutarPruebas(){
     }
 
      const r3 = sumar(5, 10);
-  if (r3.includes("15")) {
+    if (r3.includes("15")) {
     console.log("Test 3 pasado: funcion sumar correcta en Martinez");
     pasadas++;
-  } else {
+    } else {
     console.log("Test 3 fallido: ", r3);
     fallidas++;
-  }
+    }
+
+    const health = healtCheack();
+    if (health.status==='ok'){
+        console.log('Test healtCheck pasado');
+        pasadas++;
+    } else {
+        console.log('Test healtCheck fallido', health);
+        fallidas++;
+    }
   
     console.log("\nResultados: " + pasadas + "pasadas, ", + fallidas + "fallidas");
     if (fallidas>0) process.exit(1);
