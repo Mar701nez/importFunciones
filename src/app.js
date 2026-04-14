@@ -16,10 +16,10 @@ export function sumar(a, b) {
 }
 
 export function healtCheack () {
-  return {
-    status:'ok',
-    timestape: new Date().toISOString(),
-    servicio: 'Streamflow API',
-    version: '1.0.0'
-  };
+  return null;
 }
+
+// status:'ok',
+//  timestape: new Date().toISOString(),
+//  servicio: 'Streamflow API',
+//  version: '1.0.0'
