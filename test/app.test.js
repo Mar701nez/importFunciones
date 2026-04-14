@@ -1,11 +1,11 @@
-import {saludar, despedir, estadoSistema} from "../src/app"
+import {saludar, estadoSistema, sumar} from "../src/app.js"
 
 function ejecutarPruebas(){
     let pasadas = 0;
     let fallidas = 0;
 
     const r1 = saludar("Martinez")
-    if (r1.includes.toLowerCase("Martinez")){
+    if (r1.toLowerCase().includes("Martinez")){
         console.log ("Test 1 pasado: funcion saludar en Martinez es correcta")
         pasadas++;
     } else {
