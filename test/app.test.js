@@ -5,7 +5,7 @@ function ejecutarPruebas(){
     let fallidas = 0;
 
     const r1 = saludar("Martinez")
-    if (r1.toLowerCase().includes("Martinez")){
+    if (r1.includes("Martinez")){
         console.log ("Test 1 pasado: funcion saludar en Martinez es correcta")
         pasadas++;
     } else {
@@ -32,6 +32,6 @@ function ejecutarPruebas(){
   }
   
     console.log("\nResultados: " + pasadas + "pasadas, ", + fallidas + "fallidas");
-    if (fallidas>0) ProcessingInstruction.exit(1);
+    if (fallidas>0) process.exit(1);
 }
     ejecutarPruebas()
