@@ -1,4 +1,4 @@
-import {saludar, estadoSistema, sumar, healtCheack} from "../src/app.js"
+import {saludar, estadoSistema, sumar, healtCheack, factorial} from "../src/app.js"
 
 function ejecutarPruebas(){
     let pasadas = 0;
@@ -29,6 +29,15 @@ function ejecutarPruebas(){
     } else {
     console.log("Test 3 fallido: ", r3);
     fallidas++;
+    }
+
+    const r5 = factorial(5); 
+    if (r5 === 120) {
+        console.log("Test 5 pasado: funcion factorial correcta (5! = 120)");
+        pasadas++;
+    } else {
+        console.log("Test 5 fallido: se esperaba 120 pero dio " + r5);
+        fallidas++;
     }
 
     const health = healtCheack();
