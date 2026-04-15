@@ -20,6 +20,6 @@ export function healtCheack () {
     status:'ok',
     timestape: new Date().toISOString(),
     servicio: 'Streamflow API',
-    version: '1.0.0'
+    version: '1.1.0'
   };
 }
