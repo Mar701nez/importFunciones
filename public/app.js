@@ -18,7 +18,7 @@ function healtchek(){
 function verificarSistema(){
 const resultado = healtchek();
 const statusDiv = document.getElementById('status');
-statusDiv.textContent = ${resultado.message} | ${resultado.timestamp};
+statusDiv.textContent = '${resultado.message} | ${resultado.timestamp}';
 statusDiv.style.color = '#009b4c'
 }
 
